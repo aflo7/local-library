@@ -1,0 +1,118 @@
+form {
+  background-color: red;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(238, 235, 239);
+  height: fit-content;
+}
+
+.form-wrapper {
+  background-color: black;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #b0b0b0;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.submit-btn {
+  background-color: rgb(150, 253, 152);
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form-check-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  color: black;
+}
+
+.close-btn {
+  background-color: rgb(255, 96, 96);
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  margin-top: 5px;
+}
+
+.add-book-btn {
+
+  margin-top: 10px;
+
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-book-btn:hover {
+  color: rgb(133, 133, 133);
+}
+
+.book-wrapper {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .book-wrapper {
+    width: calc((100% / 2) - 20px);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .book-wrapper {
+    width: calc((100% / 3) - 20px);
+  }
+}
+
+.library-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1240px) {
+  .content {
+    width: 1240px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-content {
+    width: 1240px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

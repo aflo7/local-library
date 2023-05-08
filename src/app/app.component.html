@@ -1,0 +1,51 @@
+<div class="app-wrapper">
+  <nav>
+    <div class="nav-content">
+      <div style="font-weight: bold;">Library</div>
+      <div>by Andres Flores</div>
+
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="content">
+      <div style="display: flex; justify-content: center;">
+        <div class="add-book-btn" (click)="showModal()">+ Add book</div>
+      </div>
+
+      <div class="library-wrapper">
+        <book class="book-wrapper" *ngFor="let book of currentLibrary" [title]="book.title" [author]="book.author"
+          [pageCount]="book.pageCount" [read]="book.read"></book>
+      </div>
+
+
+      <div class="form-wrapper" [style.display]="display">
+        <form ngNativeValidate (submit)="handleSubmit($event)">
+          <h4 style="text-align: center; font-weight: bold;">Add a new book</h4>
+          <div class="mb-3">
+            <input required class="form-control" placeholder="Title" [formControl]="title">
+          </div>
+          <div class="mb-3">
+            <input type="text" required class="form-control" placeholder="Author" [formControl]="author">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" required class="form-control" placeholder="Page count" [formControl]="pageCount">
+          </div>
+
+          <div class="form-check-wrapper">
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" [formControl]="read">
+              <label class="form-check-label" for="exampleCheck1" style="font-size: 12pt;">Have you read it?</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+          <button class=" btn btn-primary close-btn" (click)="hideModal()">Cancel</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
